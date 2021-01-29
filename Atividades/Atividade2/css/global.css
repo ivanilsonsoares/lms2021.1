@@ -1,0 +1,197 @@
+body{
+  font-family: Roboto, sans-serif;
+  background: rgb(18, 18, 20);
+}
+
+.nav{
+  background-color: rgb(30 30 35);
+  border-radius: 1%;
+}
+
+
+header  h1{
+    text-align: center;
+    color: slateblue;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 8px;
+  padding: 1px;
+  overflow: hidden;
+  }
+  
+header ul li {
+  float: left;
+}
+
+header ul li:hover, .dropdown:hover .dropbtn {
+  background-color:rgb(18, 18, 20);
+}
+  
+header ul li a {
+    display: block;
+    padding: 4px;
+    text-decoration: none;
+    color: rgb(235, 235, 235);
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
+}
+
+.centro {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: rgb(235, 235, 235);
+  font-family: Roboto, sans-serif;;
+  cursor: pointer;
+  padding-top: 13%;
+  margin-top: 3px;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+
+li.dropdown {
+  display: inline-block;
+  margin-top: 3px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.publi{
+  background-color: rgb(30 30 35);
+  border-radius: 2%;
+  padding: 1%;
+  width: 92%;
+  margin-left: 3%;
+  margin-top: 3%;
+
+}  
+
+
+.publi h1{
+  text-align: center;
+  color: aliceblue;
+}
+
+.publi em{
+  text-align: center;
+  color: aliceblue;
+}
+
+.publi section{
+  text-align: justify;
+  color: aliceblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.publi section i{
+  font-size: 10px;
+}
+
+.publi p{
+  text-align: justify;
+  color: aliceblue;
+}
+
+.publi p i{
+  font-size: 10px;
+}
+
+.publi a{
+  text-decoration: none;
+  background: slateblue;
+  width: 0;
+  height: 0;
+  border-radius: 0;
+  padding: 2px;
+  text-align: center;
+  color: aliceblue;
+  margin: 2%;
+}
+
+.publi table{
+  text-align: center;
+  border-collapse: collapse;
+  width: 45%;
+  background-color: azure;
+  margin-left: 25%;
+  border-radius: 1%;
+}
+
+.publi td, th {
+  border: 1px solid #f0f0f0;
+  text-align: left;
+  padding: 8px;
+}
+
+.publi tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+header ul li a img{
+    width: 75%;
+}
+
+.cadastro{
+  background-color: rgb(30 30 35);
+  color: aliceblue;
+  margin: 3%;
+  width: 90%;
+  height: 0%;
+  padding: 2%;
+  margin-left: 3%;
+}
+
+.cadastro .campoText{
+  width: 22%;
+  text-align: center;
+}
+
+.formulario {
+  text-align: center;
+  margin: 3%;
+  padding: 0%;
+}
+
+.cadastro h1{
+  color: darkslateblue;
+  text-align: center;
+}
+
+.roda{
+  background-color: rgb(30 30 35);
+  color: aliceblue;
+  padding: 2px;
+  margin: 1%;
+  text-align: center;
+  
+}

@@ -1,0 +1,139 @@
+body{
+    font-family: Roboto, sans-serif;
+    background: rgb(18, 18, 20);
+}
+
+header  h1{
+    text-align: center;
+    color: slateblue;
+    margin-left: 25%;
+}
+  
+.centro {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: rgb(235, 235, 235);
+    font-family: Roboto, sans-serif;;
+    cursor: pointer;
+    padding-top: 13%;
+    margin-top: 3px;
+}
+
+  
+.publi{
+    background-color: rgb(30 30 35);
+    border-radius: 2%;
+    padding: 1%;
+    width: 92%;
+    margin-left: 3%;
+    margin-top: 3%;
+  
+}  
+  
+  
+.publi h1{
+    text-align: center;
+    color: aliceblue;
+}
+  
+.publi em{
+    text-align: center;
+    color: aliceblue;
+}
+  
+.publi section{
+    text-align: justify;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+.publi section i{
+    font-size: 10px;
+}
+  
+.publi p{
+    text-align: justify;
+    color: aliceblue;
+}
+  
+.publi p i{
+    font-size: 10px;
+}
+  
+.publi a{
+    text-decoration: none;
+    background: slateblue;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    padding: 2px;
+    text-align: center;
+    color: aliceblue;
+    margin: 2%;
+}
+  
+.publi table{
+    text-align: center;
+    border-collapse: collapse;
+    width: 45%;
+    background-color: azure;
+    margin-left: 25%;
+    border-radius: 1%;
+}
+  
+.publi td, th {
+    border: 1px solid #f0f0f0;
+    text-align: left;
+    padding: 8px;
+}
+  
+.publi tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+  
+.roda{
+    background-color: rgb(30 30 35);
+    color: aliceblue;
+    padding: 2px;
+    margin: 1%;
+    text-align: center;
+    
+}
+
+.navLateral {
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(30 30 35);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+.navLateral a {
+    padding: 6px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    display: block;
+    text-align: center;
+}
+
+.navLateral a img{
+    width: 75%;
+}
+  
+.navLateral a:hover {
+    color: #5c1dd3;
+    background-color:  black;
+}
+
+.artigos{
+    margin: 397px;
+    margin-top: 0;
+    width: 69%;
+}

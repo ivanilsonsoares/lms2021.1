@@ -1,0 +1,261 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(45deg,#1b1627,#7204f0);
+
+  
+}
+
+.menu-superior{
+    background:linear-gradient(25deg, rgba(20, 16, 16, 0),rgb(155, 40, 40));
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 6px;
+    
+}
+.menu-superior .menu-texto{
+    display: flex;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    height: 40px;
+    width: 85px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+.menu-superior .menu-texto:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+.container{
+    display: flex;
+}
+
+.container .container-esquerdo{
+    background: linear-gradient(25deg, rgba(20, 16, 16, 0),rgb(155, 40, 40));
+    height: 800px;
+    width: 350px;
+    margin-left: 0%;
+    box-shadow: inset -2px 4px 10px 0px;
+}
+
+.container .container-esquerdo .celula-lateral .celulas{
+    background-color: thistle;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.container .container-esquerdo .celula-lateral .celulas h1{
+    color: black;
+    font-size: 20px;
+}
+
+.container .container-meio{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .container-meio .cima{
+    flex-grow: 1;
+    height: 400px;
+    display: flex;
+    
+    flex-direction: row;
+}
+
+
+.container .container-meio .baixo{
+    flex-grow: 1;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+}
+.container .container-meio .cima .celula1{
+    background-color: rgba(22, 15, 15, 0.384);
+    height: 400px;
+    width: 50%;
+
+}
+
+.container .container-meio .cima .celula2{
+    height: 400px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.container .container-meio .cima .celula2 .overlay{
+    position: relative;
+}
+
+.container .container-meio .cima .celula2 .overlay img{
+    width: 400px;
+    
+}
+
+.container .container-meio .cima .celula2 .overlay .barra{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(10, 9, 9, 0.452);
+    width: 400px;
+    height: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 86%;
+    opacity: 1;
+}
+
+.container .container-meio .cima .celula2 .overlay .barra:hover{
+    opacity: 0;
+}
+
+.container .container-meio .cima .celula2 .overlay .barra .overlay-text{
+    display: block;
+
+}
+
+.container .container-meio .baixo .celula{
+    height: 400px;
+    width: 50%;    
+}
+
+.container .container-meio .baixo .celula .animacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50%;
+    width: 100px;
+    height: 100px;
+    animation-name:pasear ;
+    animation-duration: 5s; 
+    animation-iteration-count: infinite;   
+}
+
+.container .container-meio .baixo .celula .animacao img{
+    width: 80%;
+    height: 100%;
+
+}
+
+@keyframes pasear{
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(10);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+    .container .container-esquerdo{
+        height: 400px;
+        width: 100%;
+    }
+
+    .container .container-esquerdo .celula-lateral{
+        height: 400px;
+        width: 100%;
+    }
+
+    .container .container-meio .cima{
+        flex-direction: column;
+        height: 800px;
+        width: 100%;
+    }
+    .container .container-meio .cima .celula1{
+        background-color: rgb(194, 160, 154);
+        height: 400px;
+        width: 100%;
+    }
+    .container .container-meio .cima .celula2{
+        background-color: rgb(194, 160, 154);
+        height: 400px;
+        width: 100%;
+    }
+    .container .container-meio .baixo{
+        flex-direction: column;
+        height: 1600px;
+        width: 100%;
+    }
+   
+    .container .container-meio .cima .celula2{
+        background-color: rgb(150, 39, 20);
+        height: 400px;
+        width: 100%;
+        
+    }
+
+    .container .container-meio .baixo .celula{
+        height: 400px;
+        width: 100%;    
+    }
+    
+}
+
+.container .container-meio .cima .celula1 .accordion ul {
+    margin: 0;
+    padding: 0;
+}
+.container .container-meio .cima .celula1 .accordion ul li {
+    display:block;
+    overflow: hidden;
+    height:40px;
+    width: 100%;
+    border-radius:20px 30px;
+    background-color:#ffffff;
+    transition: height 0.3s;
+    
+}
+
+.container .container-meio .cima .celula1 .accordion ul li h3 {
+    display:block;
+    margin: 0;
+    padding:10px;
+    height:19px;
+    border-radius:20px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:none;
+    text-transform:lowercase;
+    color: #000;
+    background: #cccccc;
+    text-align: left;
+    font-size:16px;
+}
+.container .container-meio .cima .celula1 .accordion ul li h3 a{
+    color: #000;
+}
+
+.container .container-meio .cima .celula1 .accordion ul li h3 a:hover{
+    color: #fff;
+}
+.container .container-meio .cima .celula1 .accordion ul li:hover {
+    height: 240px;
+}
+
+.container .container-meio .cima .celula1 .accordion:hover ul li:hover h3 {
+    color:#fff;
+    background: #000000;
+}
+
+.container .container-meio .cima .celula1 .accordion ul li h3:hover {
+    cursor:pointer;
+}
+
+
+
+

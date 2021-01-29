@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Roboto, sans-serif;
+    background-color: #143D59;
+  }
+.container-menu{
+    height: 50px;
+    display: flex;
+    background-color: #F4B41A; 
+    color:  white;
+    justify-content: flex-end;
+    
+}
+
+.container-menu .navegador .menu{
+    display: flex;
+    flex-direction: row;  
+}
+
+.container-menu .navegador .menu .butao{
+    padding: 16px;
+    margin-left: 5px;
+    background-color: #F4B41A;
+    cursor: pointer;
+}
+.container-menu .navegador .menu .butao:hover{
+    background-color:  #d89907;
+}
+
+.container-menu .navegador .menu .butao a{
+    text-decoration: none;
+    color: white; 
+}
+
+
+.container-meio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.container-meio .esquerdo{
+    background-color: white;
+    min-width: 300px;
+    flex-basis: 300px;
+    flex-shink: 0;
+}
+
+.container-meio .esquerdo .link{
+    padding: 5px;
+    text-align: center;
+    margin-top: 5px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+.container-meio .esquerdo .link:hover{
+    background-color: rgb(196, 194, 194);
+}
+
+.container-meio .esquerdo .link a{
+    text-decoration: none;
+    color: black; 
+}
+
+.container-meio .meio{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 3;
+}
+
+.container-meio .meio .foto{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    padding: 1px;
+    margin-left: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    
+    
+}
+
+.container-meio .meio .foto img{
+    width: 150px;
+    height: 150px;
+}
+
+
+
+.container-meio .direito{
+    height: 90vh;
+    min-width: 150px;
+    margin-top: 5px;
+    margin-right: 10px;
+    border-radius: 4px;
+    flex-grow: 1;
+    background-color: white;
+    flex-shink: 0;
+}
+
+.container-fim{
+    position: fixed;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    background-color: #F4B41A;
+    align-items: center;
+    justify-content: center;
+    bottom: 0px;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+}
