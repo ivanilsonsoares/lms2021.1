@@ -165,11 +165,13 @@ body{
     .container .container-esquerdo{
         height: 400px;
         width: 100%;
+        box-shadow: none;
     }
 
     .container .container-esquerdo .celula-lateral{
         height: 400px;
         width: 100%;
+        
     }
 
     .container .container-meio .cima{
