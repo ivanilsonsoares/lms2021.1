@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+        <title>Atividade 5</title>
+    </head>
+
+    <body>
+        <header class="Navegador-superior">
+            <nav class="Navagador-barra">
+                <div class="link">
+                    <div class="logo">
+                        <h1>Activity 5</h1>
+                    </div>
+    
+                    <div class="conteudo">
+                        <div class="post">Post</div>
+                        <button> &#9776; </button>
+                    </div>
+                </div>
+
+                <div class="menu-retratil active">
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                </div>
+    
+            </nav>
+        </header>
+
+            <nav class="lateral">
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+            </nav>
+            
+            <div class="container">
+                <img src="https://loremflickr.com/250/1000" alt="">
+            </div>
+        
+        
+        <script>
+            let button = document.querySelector(".Navegador-superior .Navagador-barra .conteudo button");
+            console.log(button);
+            
+            let menu_retratil = document.querySelector(".Navegador-superior .menu-retratil");
+            console.log(menu_retratil); 
+
+            button.addEventListener("click", function(){
+                menu_retratil.classList.toggle("active");
+            })
+
+            
+
+        </script>
+    </body>
+
+</html>
