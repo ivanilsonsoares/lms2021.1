@@ -17,9 +17,10 @@
                     </div>
     
                     <div class="conteudo">
-                        <div class="post">Post</div>
+                        <div class="post open-modal">Post</div>
                         <button> &#9776; </button>
                     </div>
+                    
                 </div>
 
                 <div class="menu-retratil active">
@@ -31,6 +32,35 @@
             </nav>
         </header>
 
+        <div class="overlay-modal">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h3>Escreva sua mensagem</h3>
+                    <button class="modal-close"> X </button>
+                </div>
+                <div class="modal-content">
+                    <div class="comentar">
+                        <h3>Nome:</h3>
+                        <input type="text" placeholder="Digite seu nome">
+                        <h3>Mensagem:</h3>
+                        <input type="text" placeholder="Digite a mensagem">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="button-modal button-close">
+                        Cancelar
+                    </button>
+
+                    <button class="button-modal button-save">
+                        Postar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="meio">
             <nav class="lateral">
                 <a href="">1</a>
                 <a href="">2</a>
@@ -38,24 +68,41 @@
             </nav>
             
             <div class="container">
-                <img src="https://loremflickr.com/250/1000" alt="">
+                <div class="post">
+                    <div class="info">
+                        <h3 class="mudar-nome">
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            
+                        </h3>
+                        <h1 class="mudar-info">
+
+                        </h1>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="info">
+                        <h3>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            Fulano de tal
+                        </h3>
+                        <h1>Olá tudo bem? Olá tudo bem? Olá tudo bem? </h1>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="info">
+                        <h3>
+                            <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
+                            Fulano de tal
+                        </h3>
+                        <h1>Olá tudo bem? Olá tudo bem? Olá tudo bem? </h1>
+                    </div>
+                </div>
             </div>
+        </div>
+        <!-- script -->
         
-        
-        <script>
-            let button = document.querySelector(".Navegador-superior .Navagador-barra .conteudo button");
-            console.log(button);
-            
-            let menu_retratil = document.querySelector(".Navegador-superior .menu-retratil");
-            console.log(menu_retratil); 
-
-            button.addEventListener("click", function(){
-                menu_retratil.classList.toggle("active");
-            })
-
-            
-
-        </script>
+        <script type="text/javascript" src="js/global.js"></script>
     </body>
 
 </html>
