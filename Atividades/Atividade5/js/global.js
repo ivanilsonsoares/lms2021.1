@@ -46,35 +46,51 @@ window.addEventListener("click", function (event) {
         location.reload();
     }
 })
-function infos(){
-    let posts_data = [
-        {
-            nome:"victor",
-            mensagem:"tudo bem?"
-        },
-        {
-            nome:"Carlos ",
-            mensagem:"Tá quente hoje!"
-        }
-    ]
-    
-}
 
-    let h3 = document.createElement("h3");
-    let h1 = document.createElement("h1");
-    infos.posts_data
-    let mudarNome = document.querySelector(".meio .container .post .info .mudar-nome")
-    console.log(mudarNome)
 
-    let mudarInfo = document.querySelector(".meio .container .post .info .mudar-info")
-    console.log(mudarInfo)
+let posts_data = [
+    {
+        nome: "Victor",
+        mensagem: "tudo bem?"
+    },
+    {
+        nome: "Carlos ",
+        mensagem: "Tá quente hoje!"
+    }
+]
 
-    mudarNome.appendChild(h3);
-    mudarInfo.appendChild(h1);
-    let nome = document.createTextNode("teste dfdf");
-    let info = document.createTextNode("teste dfdf");
+function number(minimo, maximo) {
+    minimo = 0;
+    maximo = 2;
+    return Math.floor(Math.random() * (maximo - minimo)) + minimo;
+  }
 
+  let post = 0;
+  let Old;
+
+  let Interval = setInterval(function() {
+
+    let equal = true
+
+    while (equal) {
+      post = number(0, posts_data.length)
+
+      if(post !==Old) {
+        equal = false;
+      }
+
+    }
+
+    Old = post
+
+    let mudarNome = document.querySelector(".info .mudar-nome")
+    let mudarInfo = document.querySelector(".info .mudar-info")
+
+    let nome = mudarNome.innerHTML = posts_data[post].nome
+    let info = mudarInfo.innerHTML = posts_data[post].mensagem
 
     h3.appendChild(nome);
-    h1.appendChild(info)
+    h1.appendChild(info);
+
+  }, 2000)
 
