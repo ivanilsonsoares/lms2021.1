@@ -216,37 +216,33 @@ body{
     
 }
 
-.meio .container .post{
-    color: white;
-    padding: 2%;
-    margin-top: 0;
-    
-}
 
-.meio .container .post .info{
+
+.meio .container .info{
     background-color: rgb(29, 30, 31);
     color: white;
     padding: 2%;
     border-radius: 15px;
+    margin-top: 3%;
 }
 
-.meio .container .post .destaque-blue{
+.meio .container  .destaque-blue{
     background-color: rgb(27 74 121);
 }
 
 
-.meio .container .post .info .destaque{
+.meio .container  .info .destaque{
     display: flex;
 }
 
 
-.meio .container .post .info h3{
+.meio .container  .info h3{
     display: flex;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.meio .container .post .info h1{
+.meio .container  .info h1{
     display: flex;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -256,12 +252,14 @@ body{
 
 
 
-.meio .container .post .info .avatar {
+.meio .container .info .avatar {
+    background-image: repeating-linear-gradient(90deg,red,yellow 7%,green 10%);
     vertical-align: middle;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-right: 5px;
+
 }
 
 .meio .container.active{

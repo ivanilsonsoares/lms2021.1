@@ -33,31 +33,32 @@
         </header>
 
         <div class="overlay-modal">
-            <div class="modal-container">
-                <div class="modal-header">
-                    <h3>Escreva sua mensagem</h3>
-                    <button class="modal-close"> X </button>
-                </div>
-                <div class="modal-content">
-                    <div class="comentar">
-                        <h3>Nome:</h3>
-                        <input type="text" placeholder="Digite seu nome">
-                        <h3>Mensagem:</h3>
-                        <input type="text" placeholder="Digite a mensagem">
-
+            <form action="">
+                <div class="modal-container">
+                    <div class="modal-header">
+                        <h3>Escreva sua mensagem</h3>
+                        <button class="modal-close"> X </button>
+                    </div>
+                    <div class="modal-content">
+                        <div class="comentar">
+                            <h3>Nome:</h3>
+                            <input type="text" class="nome-form" placeholder="Digite seu nome" required >
+                            <h3>Mensagem:</h3>
+                            <input type="text" class="mensagem-form" placeholder="Digite a mensagem" required>
+    
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="button-modal button-close">
+                            Cancelar
+                        </button>
+    
+                        <button class="button-modal button-save submit-button">
+                            Postar
+                        </button>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button class="button-modal button-close">
-                        Cancelar
-                    </button>
-
-                    <button class="button-modal button-save">
-                        Postar
-                    </button>
-                </div>
-
-            </div>
+            </form>
         </div>
 
         <div class="meio">
@@ -68,7 +69,7 @@
             </nav>
             
             <div class="container">
-                <div class="post">
+                
                     <div class="info destaque-blue">
                         <div class="destaque">
                             <img src="images/img_avatar.png" alt="Avatar" class="avatar">
@@ -79,26 +80,26 @@
 
                         </h1>
                     </div>
-                </div>
-                <div class="post">
+                
+                
                     <div class="info">
-                        <h3>
+                        <h3 class="info-nome">
                             <img src="images/img_avatar.png" alt="Avatar" class="avatar">
                             Fulano de tal
                         </h3>
-                        <h1>Olá tudo bem? Olá tudo bem? Olá tudo bem? </h1>
+                        <h1  class="info-mensagem">Olá tudo bem? Olá tudo bem? Olá tudo bem? </h1>
                     </div>
-                </div>
+                
 
-                <div class="post">
+                
                     <div class="info">
-                        <h3>
+                        <h3 class="info-nome">
                             <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
                             Fulano de tal
                         </h3>
-                        <h1>Olá tudo bem? Olá tudo bem? Olá tudo bem? </h1>
+                        <h1 class="info-mensagem">Olá tudo bem? Olá tudo bem? Olá tudo bem? </h1>
                     </div>
-                </div>
+                
             </div>
         </div>
         <!-- script -->
