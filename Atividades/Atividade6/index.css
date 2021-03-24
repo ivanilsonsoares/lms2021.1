@@ -1,0 +1,18 @@
+
+.navbar{
+    padding-top: 0;
+    
+}
+
+.navbar>.container-fluid{
+    background: blueviolet;
+    
+}
+.navbar .container-fluid{
+    width: 900px;
+    
+}
+
+.navbar-text{
+    margin-left: auto;
+}
