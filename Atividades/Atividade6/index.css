@@ -1,4 +1,8 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .navbar{
     padding-top: 0;
     
@@ -16,3 +20,92 @@
 .navbar-text{
     margin-left: auto;
 }
+
+.whats-control{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    
+}
+
+.whats-control .whats-control-center{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.whats-control .whats-control-center .group{
+    display: block;
+    width: 350px;
+    background: lightslategray;
+}
+
+.whats-control .whats-control-center .group .group-info{
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+
+.whats-control .whats-control-center .group .group-info img{
+    width: 30px;
+    background: white;
+    
+    border-radius: 15px;
+}
+
+.whats-control .whats-control-center .group .group-info a{
+    text-decoration: none;
+    color: white;
+}
+
+.whats-control .whats-control-center .group .group-create{
+    padding: 10px;
+    bottom: 0px;
+}
+
+.whats-control .whats-control-center .group .group-create .button{
+    width: 100%;
+}
+
+.whats-control .whats-control-center .group .group-create .button .mover{
+    margin-left: 67%;
+}
+
+.whats-control .whats-control-center .talk{
+    width: 549px;
+    background: lightslategray;
+}
+
+.whats-control .whats-control-center .talk .group-talk-info ul{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.whats-control .whats-control-center .talk .group-talk-info ul li{
+    width: 300px;
+    background: white;
+    border: 2px;
+    padding: 10px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-bottom: 10px;    
+}
+
+.whats-control .whats-control-center .talk .group-talk-create{
+    border-top: 1px solid white;
+    
+}
+
+.whats-control .whats-control-center .talk .group-talk-create .group-talk-create-form{
+    display: flex;
+    margin-top: 5px;
+}
+
+.whats-control .whats-control-center .talk .group-talk-create .group-talk-create-form .write-message{
+    width: 430px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+

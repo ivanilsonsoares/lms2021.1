@@ -26,7 +26,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <span class="navbar-text">
-                       User
+                        User
                     </span>
                 </div>
             </div>
@@ -34,22 +34,78 @@
 
     </header>
 
-    
+    <div class="whats-control">
+        <div class="whats-control-center">
+            <div class="group">
+                <div class="conjunto">
+                    <div class="group-info">
+                        <img class="img" src="https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_960_720.png"
+                            alt="icon">
+                        <a class="titulo">BBB</a>
+                    </div>
+                </div>
+
+                <div class="group-create">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="group" placeholder="Nome do Grupo">
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="mover btn btn-primary">Criar Grupo</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="talk">
+                <div class="group-talk-info">
+                    <div class="talk-info">
+                        <ul class="ul">
+                            <li class="li">
+                                <a class="nome">Nome</a>
+                                <p class="texto">conteudo</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="group-talk-create">
+                    <form class="group-talk-create-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control write-message" id="talk"
+                                placeholder="enviar mensagem">
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="mover btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Entrar</button>
                 </div>
             </div>
         </div>
@@ -63,8 +119,98 @@
         </script>
     <script>
         let modal = new bootstrap.Modal(document.getElementById("exampleModal"));
-
         modal.show();
+    </script>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+
+        let galeria_group = document.querySelector(".conjunto");
+        let galeria_talk = document.querySelector(".group-talk-info");
+
+        function identificação(){
+            
+        }
+
+        function listarGrupos(nome) {
+            let group = document.createElement("div");
+            group.classList.add("group-info");
+
+            let img = document.createElement("img");
+            img.classList.add("img");
+
+
+            let title = document.createElement("a")
+            title.classList.add("titulo");
+            title.textContent = nome;
+
+            group.appendChild(img);
+            group.appendChild(title);
+
+            return group;
+        }
+
+        function listarConversar(nome, corpo) {
+            let talk = document.createElement("div");
+            talk.classList.add("talk-info");
+
+            let Ul = document.createElement("ul");
+            Ul.classList.add("ul");
+
+            let name = document.createElement("a")
+            name.classList.add("nome");
+            name.textContent = nome;
+
+            let title = document.createElement("p")
+            title.classList.add("texto");
+            title.textContent = corpo;
+
+            talk.appendChild(name);
+            talk.appendChild(title);
+            console.log(talk);
+        }
+
+        function Conversas(group) {
+            axios({
+                method: 'GET',
+                url: 'https://server-json-lms.herokuapp.com/grupos/' + group.id + '/mensagens'
+
+            }).then(
+                (response) => {
+                    let talks = response.data;
+                    for (let talk of talks) {
+                        let createTalk = listarConversar(talk.nome, talk.corpo);
+                    }
+                    console.log(response.data)
+                }
+            ).catch(
+                (error) => {
+                    console.log(error);
+                }
+            )
+
+        }
+
+
+        // Listar grupos
+        axios({
+            method: 'GET',
+            url: 'https://server-json-lms.herokuapp.com/grupos'
+
+        }).then(
+            (response) => {
+                let groups = response.data;
+                for (let group of groups) {
+                    let createGroup = listarGrupos(group.nome);
+                    galeria_group.appendChild(createGroup);
+                    Conversas(group)
+                }
+            }
+        ).catch(
+            (error) => {
+                console.log(error);
+            }
+        )
     </script>
 </body>
 
