@@ -49,9 +49,8 @@
 }
 
 .whats-control .whats-control-center .group .group-info img{
+    background-image: repeating-linear-gradient(90deg,red,yellow 7%,green 10%);
     width: 30px;
-    background: white;
-    
     border-radius: 15px;
 }
 
@@ -83,7 +82,7 @@
     margin-top: 10px;
 }
 
-.whats-control .whats-control-center .talk .group-talk-info ul li{
+.whats-control .whats-control-center .talk .group-talk-info ul li {
     width: 300px;
     background: white;
     border: 2px;
@@ -91,6 +90,11 @@
     border-bottom-left-radius: 25px;
     border-top-right-radius: 25px;
     margin-bottom: 10px;    
+}
+
+.whats-control .whats-control-center .talk .group-talk-info ul li a{
+    text-decoration: none;
+    color: black;   
 }
 
 .whats-control .whats-control-center .talk .group-talk-create{
