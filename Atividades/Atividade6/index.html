@@ -239,6 +239,7 @@
 
         // Listar grupos
         function atualizarGroups() {
+            galeria_group.innerHTML = "";
             axios({
                 method: 'GET',
                 url: 'https://server-json-lms.herokuapp.com/grupos'
@@ -276,7 +277,7 @@
                     nome: input_form.value
                 }
             }).then((response) => {
-                length.atualizarGroups();
+                atualizarGroups();
             }).catch((error) => {
                 console.log(error);
             })
@@ -298,12 +299,15 @@
                     grupoId:globalId
                 }
             }).then((response) => {
+                input_form_talk.innerHTML = ""
                 Conversas(globalId,group);
+                
             }).catch((error) => {
                 console.log(error);
             })
-
         })
+
+        
 
 
 
