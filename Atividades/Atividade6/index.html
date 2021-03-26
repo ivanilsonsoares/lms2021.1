@@ -41,7 +41,7 @@
                     <div class="group-info">
                         <img class="img" src="https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_960_720.png"
                             alt="icon">
-                        <a type="submit" class="titulo">BBB</a>
+                        <a  class="titulo">BBB</a>
                     </div>
                 </div>
 
@@ -60,7 +60,7 @@
 
             <div class="talk">
                 <div class="group-talk-info"></div>
-                <div class="group-talk-create">
+                <div class="group-talk-create" id="form_talk">
                     <form class="group-talk-create-form">
                         <div class="mb-3">
                             <input type="text" class="form-control write-message" id="talk"
@@ -117,6 +117,7 @@
         let galeria_talk = document.querySelector(".group-talk-info");
         let barra_nome = document.querySelector(".navbar-collapse");
         window.globalName = identificação();
+        window.globalId;
 
         function identificação() {
             let form = document.getElementById('name-identifica');
@@ -135,9 +136,8 @@
             let span = document.createElement("span");
             span.classList.add("navbar-text")
             span.textContent = window.globalName;
-
-            console.log(span)
             barra_nome.appendChild(span);
+            return span;
         }
 
         let button = document.querySelector(".modal-body form .modal-footer .btn-primary");
@@ -146,20 +146,27 @@
             modal.hide();
         })
 
-        let escolherGroup = document.querySelector(".group .conjunto .group-info .titulo");
-
-        console.log(escolherGroup)
 
 
 
-        console.log(button)
+        function listarGrupos(id, nome) {
 
-        function listarGrupos(nome) {
+            let conjunto = document.createElement("div");
+            conjunto.classList.add("conjunto");
+
             let group = document.createElement("div");
             group.classList.add("group-info");
 
+            group.addEventListener("click", function(){
+                console.log(id); 
+                Conversas(id,group);
+                window.globalId = id;
+
+            })
+
             let img = document.createElement("img");
             img.classList.add("img");
+            
 
 
             let title = document.createElement("a")
@@ -168,10 +175,16 @@
 
             group.appendChild(img);
             group.appendChild(title);
+            conjunto.appendChild(group);
 
+            group = document.querySelector(".group-talk-info");
+            
 
-            return group;
+            
+            return conjunto;
         }
+
+        
 
         function listarConversar(talks) {
             let talk = document.createElement("ul");
@@ -195,31 +208,22 @@
 
             talk.appendChild(Ul);
 
+            Ul = document.querySelector(".group-talk-info").innerHTML = "";
+
             console.log(talk);
 
             return talk;
         }
 
-        function Conversas(group) {
+        function Conversas(id,group) {
 
-            // escolherGroup.addEventListener("click", function () {
-            //     console.log("id: "+group.id)                
-            // })
 
             axios({
                 method: 'GET',
-                url: 'https://server-json-lms.herokuapp.com/grupos/' + group.id + '/mensagens'
+                url: 'https://server-json-lms.herokuapp.com/grupos/' + id + '/mensagens'
 
             }).then(
                 (response) => {
-                    // let talks = response.data;
-                    // for (let talk of talks) {
-                    //     if (group.id == talk.grupoId) {
-                    //         let createTalk = listarConversar(talk.nome, talk.corpo);
-                    //         galeria_talk.appendChild(createTalk);
-                    //     }
-                    // }
-                    // console.log(response.data)
                     let talks = response.data
                     let conversa = listarConversar(talks);
                     galeria_talk.appendChild(conversa);
@@ -243,9 +247,8 @@
                 (response) => {
                     let groups = response.data;
                     for (let group of groups) {
-                        let createGroup = listarGrupos(group.nome);
+                        let createGroup = listarGrupos(group.id,group.nome);
                         galeria_group.appendChild(createGroup);
-                        Conversas(group);
                     }
                 }
             ).catch(
@@ -256,12 +259,13 @@
         }
 
         atualizarGroups();
+        
 
         let form_group = document.getElementById("form-group");
 
         let input_form = document.querySelector("#form-group #group");
 
-
+        // criar grupo
 
         form_group.addEventListener("submit", function (e) {
             e.preventDefault();
@@ -272,11 +276,37 @@
                     nome: input_form.value
                 }
             }).then((response) => {
-                atualizarGroups();
+                length.atualizarGroups();
             }).catch((error) => {
                 console.log(error);
             })
+            
         })
+
+        let form_talk = document.getElementById("form_talk");
+
+        let input_form_talk = document.querySelector("#form_talk #talk")
+
+        form_talk.addEventListener("submit", function(e){
+            e.preventDefault();
+            axios({
+                method: "POST",
+                url: "https://server-json-lms.herokuapp.com/mensagens",
+                data: {
+                    nome:globalName ,
+                    corpo: input_form_talk.value,
+                    grupoId:globalId
+                }
+            }).then((response) => {
+                Conversas(globalId,group);
+            }).catch((error) => {
+                console.log(error);
+            })
+
+        })
+
+
+
     </script>
 </body>
 

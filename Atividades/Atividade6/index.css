@@ -49,14 +49,17 @@
 }
 
 .whats-control .whats-control-center .group .group-info img{
-    background-image: repeating-linear-gradient(90deg,red,yellow 7%,green 10%);
+    background: repeating-linear-gradient(90deg,red,yellow 7%,green 10%);
     width: 30px;
     border-radius: 15px;
+    height: 30px;
+    padding: 3px;
 }
 
 .whats-control .whats-control-center .group .group-info a{
     text-decoration: none;
     color: white;
+    margin-left: 5px;
 }
 
 .whats-control .whats-control-center .group .group-create{
