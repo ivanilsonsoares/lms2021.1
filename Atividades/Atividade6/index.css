@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 .navbar{
     padding-top: 0;
@@ -9,7 +10,7 @@
 }
 
 .navbar>.container-fluid{
-    background: blueviolet;
+    background: rgb(42 47 50);
     
 }
 .navbar .container-fluid{
@@ -17,8 +18,17 @@
     
 }
 
+.navbar-light .navbar-brand {
+    color: rgb(255 255 255 / 90%);
+}
+
 .navbar-text{
     margin-left: auto;
+    
+}
+
+.navbar-light .navbar-text {
+    color: rgb(255 255 255);
 }
 
 .whats-control{
@@ -40,7 +50,7 @@
 .whats-control .whats-control-center .group{
     display: block;
     width: 350px;
-    background: lightslategray;
+    background: rgb(42 47 50);
 }
 
 .whats-control .whats-control-center .group .group-info{
@@ -49,11 +59,12 @@
 }
 
 .whats-control .whats-control-center .group .group-info img{
-    background: repeating-linear-gradient(90deg,red,yellow 7%,green 10%);
+    background-image: url("1.jpg");
     width: 30px;
     border-radius: 15px;
     height: 30px;
     padding: 3px;
+    
 }
 
 .whats-control .whats-control-center .group .group-info a{
@@ -77,7 +88,7 @@
 
 .whats-control .whats-control-center .talk{
     width: 549px;
-    background: lightslategray;
+    background: rgb(42 47 50);
 }
 
 .whats-control .whats-control-center .talk .group-talk-info ul{
