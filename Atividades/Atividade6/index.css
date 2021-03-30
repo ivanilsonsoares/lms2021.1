@@ -53,6 +53,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    height: 90vh;
     
 }
 
@@ -70,6 +71,7 @@
     background: rgb(42 47 50);
 }
 
+
 .whats-control .whats-control-center .group .group-info{
     border-bottom: 1px solid white;
     padding: 5px;
@@ -85,29 +87,65 @@
     
 }
 
+
 .whats-control .whats-control-center .group .group-info a{
     text-decoration: none;
     color: white;
     margin-left: 5px;
 }
 
+
 .whats-control .whats-control-center .group .group-create{
     padding: 10px;
     bottom: 0px;
+    
+}
+
+.whats-control .whats-control-center .group .group-create .form-gr{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+
+.whats-control .whats-control-center .group .group-create .form-gr .org{
+    width: 100%;
+    margin-right: 15px;
 }
 
 .whats-control .whats-control-center .group .group-create .button{
     width: 100%;
 }
 
-.whats-control .whats-control-center .group .group-create .button .mover{
-    margin-left: 67%;
-}
 
 .whats-control .whats-control-center .talk{
     width: 549px;
     background: rgb(42 47 50);
 }
+
+.whats-control .whats-control-center .talk .group-talk-info{
+    height: 80vh;
+    overflow: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 .whats-control .whats-control-center .talk .group-talk-info ul{
     list-style: none;
@@ -129,14 +167,11 @@
     color: black;   
 }
 
-.whats-control .whats-control-center .talk .group-talk-create{
-    border-top: 1px solid white;
-    
-}
-
 .whats-control .whats-control-center .talk .group-talk-create .group-talk-create-form{
     display: flex;
     margin-top: 5px;
+    position: fixed;
+    bottom: 0;
 }
 
 .whats-control .whats-control-center .talk .group-talk-create .group-talk-create-form .write-message{

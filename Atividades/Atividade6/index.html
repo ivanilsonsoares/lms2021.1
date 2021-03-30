@@ -12,72 +12,74 @@
 
 <body>
     <!-- header -->
-    <header>
-        <!-- NavBar -->
-        <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Zap Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse" id="navbarText">
+    <div>
+        <header>
+            <!-- NavBar -->
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Zap Web</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse" id="navbarText">
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div class="whats-control">
-        <div class="whats-control-center">
-            <div class="group">
-                <div class="conjunto">
-                    <div class="group-info"></div>
+            </nav>
+        </header>
+        <div class="whats-control">
+            <div class="whats-control-center">
+                <div class="group">
+                    <div class="conjunto">
+                        <div class="group-info"></div>
+                    </div>
+                    <div class="group-create">
+                        <form id="form-group" class="form-gr">
+                            <div class="mb-3 org">
+                                <input type="text" class="form-control" id="group" placeholder="Nome do Grupo">
+                            </div>
+                            <div class="button">
+                                <button type="submit" class="mover btn btn-primary">Criar Grupo</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="group-create">
-                    <form id="form-group">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="group" placeholder="Nome do Grupo">
-                        </div>
-                        <div class="button">
-                            <button type="submit" class="mover btn btn-primary">Criar Grupo</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="talk">
-                <div class="group-talk-info"></div>
-                <div class="group-talk-create" id="form_talk">
-                    <form class="group-talk-create-form">
-                        <div class="mb-3">
-                            <input type="text" class="form-control write-message" id="talk"
-                                placeholder="enviar mensagem">
-                        </div>
-                        <div class="button">
-                            <button type="submit" class="mover btn btn-primary">Enviar</button>
-                        </div>
-                    </form>
+                <div class="talk">
+                    <div class="group-talk-info"></div>
+                    <div class="group-talk-create" id="form_talk">
+                        <form class="group-talk-create-form">
+                            <div class="mb-3">
+                                <input type="text" class="form-control write-message" id="talk"
+                                    placeholder="enviar mensagem">
+                            </div>
+                            <div class="button">
+                                <button type="submit" class="mover btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="name-identifica">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="name" required placeholder="Digite seu nome:">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                            <button type="submit" class="btn btn-primary" value="Enviar">Inserir</button>
-                        </div>
-                    </form>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="name-identifica">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="name" required placeholder="Digite seu nome:">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="submit" class="btn btn-primary" value="Enviar">Inserir</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
