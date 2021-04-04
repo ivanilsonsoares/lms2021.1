@@ -54,6 +54,7 @@ let posts_data = [
         nome: "Carlos ",
         mensagem: "Tá quente hoje!"
     }
+    
 ]
 
 function number(minimo, maximo) {

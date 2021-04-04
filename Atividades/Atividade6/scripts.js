@@ -19,16 +19,26 @@ function identificação() {
 
 }
 
-
 function mostrarNome() {
     let span = document.createElement("span");
     span.classList.add("navbar-text")
     span.textContent = window.globalName;
     barra_nome.appendChild(span);
     return span;
+
 }
+var myModalEl = document.getElementById('exampleModal')
+myModalEl.addEventListener('hidden.bs.modal', function (event) {
+    console.log(globalName)
+    if(globalName != null){
+        modal.hide();
+    }else{
+        modal.show();
+    }
+})
 
 let button = document.querySelector(".modal-body form .modal-footer .btn-primary");
+
 
 button.addEventListener("click", function () {
     modal.hide();
@@ -135,6 +145,7 @@ function atualizarGroups() {
                 let createGroup = listarGrupos(group.id, group.nome);
                 galeria_group.appendChild(createGroup);
             }
+
         }
     ).catch(
         (error) => {
@@ -161,6 +172,7 @@ form_group.addEventListener("submit", function (e) {
             nome: input_form.value
         }
     }).then((response) => {
+        input_form.innerHTML=""
         atualizarGroups();
     }).catch((error) => {
         console.log(error);

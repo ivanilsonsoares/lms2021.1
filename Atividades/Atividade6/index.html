@@ -36,7 +36,7 @@
                     <div class="group-create">
                         <form id="form-group" class="form-gr">
                             <div class="mb-3 org">
-                                <input type="text" class="form-control" id="group" placeholder="Nome do Grupo">
+                                <input type="text" class="form-control" id="group" placeholder="Nome do Grupo" required>
                             </div>
                             <div class="button">
                                 <button type="submit" class="mover btn btn-primary">Criar Grupo</button>
@@ -50,7 +50,7 @@
                         <form class="group-talk-create-form">
                             <div class="mb-3">
                                 <input type="text" class="form-control write-message" id="talk"
-                                    placeholder="enviar mensagem">
+                                    placeholder="enviar mensagem" required>
                             </div>
                             <div class="button">
                                 <button type="submit" class="mover btn btn-primary">Enviar</button>
@@ -66,16 +66,14 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form id="name-identifica">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="name" required placeholder="Digite seu nome:">
+                                <input type="text" class="form-control" id="name" required placeholder="Digite seu nome:" required>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                 <button type="submit" class="btn btn-primary" value="Enviar">Inserir</button>
                             </div>
                         </form>
